@@ -28,7 +28,9 @@ public class Main {
         Main.skaiciai(rndNumArr);
 
         System.out.println("---------7uzd----------");
+        System.out.println(arrSum(rndNumArr));
 
+        
 //        int[] intArray = new int[50];
 //        for (int i = 0; i < intArray.length; i++) {
 //            intArray[i] = (int) Math.round(Math.random()*30);
@@ -96,6 +98,21 @@ public static int rndMinMax(int min, int max){
         }
         return rndArr2;
     }
+//      6 uzduotis
+//     Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį),
+//     susumuotų ir gražintų reikšmę.
+
+    public static int arrSum (int[] arr){
+            int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+           sum = sum + arr[i];
+        }
+
+        return sum;
+    }
+
+
+
 
 
 }
