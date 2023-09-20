@@ -1,3 +1,5 @@
+import javax.print.DocFlavor;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -36,6 +38,13 @@ public class Main {
         System.out.println("---------9uzd----------");
         zvaigStaciak(a, b);
 
+        System.out.println("---------10uzd----------");
+        String skaiciavimasTarpu = "Šiandien labai graži diena bet karsta";
+        raidesTarpai(skaiciavimasTarpu);
+
+        System.out.println("---------11uzd----------");
+        String kodavimas = "Roman";
+        System.out.println(sakKodavimas(kodavimas));
 
 //        int[] intArray = new int[50];
 //        for (int i = 0; i < intArray.length; i++) {
@@ -142,8 +151,34 @@ public class Main {
         }
     }
 
+//      10 uzduotis
+//      Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų.
+//      Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 
+   public static void raidesTarpai(String sakinys) {
 
+        int tarpuSk = 0;
+        int raidziuSk = 0;
+
+        for (char c : sakinys.toCharArray()) {
+        if (c == ' ') {
+            tarpuSk++;
+        }
+
+            raidziuSk = sakinys.length() - tarpuSk;
+        }
+        System.out.println("Sakinyje yra " + tarpuSk + " tarpai ir " + raidziuSk + " raides.");
+
+    }
+
+//      11 uzduotis
+//      Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų.
+//      Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
+
+public static String sakKodavimas(String sakinysK){
+    // replace charAt(i) with charAt(i=sakinys.lentgh -i)
+    return sakinysK;
+}
 
 
 }
