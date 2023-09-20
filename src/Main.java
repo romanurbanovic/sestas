@@ -24,13 +24,16 @@ public class Main {
         System.out.println(rndMinMax(a,b));
 
         System.out.println("---------6uzd----------");
-        int[] rndNumArr = rndArr(5,10,6);
+        int[] rndNumArr = rndArr(3,10,8);
         Main.skaiciai(rndNumArr);
 
         System.out.println("---------7uzd----------");
         System.out.println(arrSum(rndNumArr));
 
-        
+        System.out.println("---------8uzd----------");
+        System.out.println(arrVidurkis(rndNumArr));
+
+
 //        int[] intArray = new int[50];
 //        for (int i = 0; i < intArray.length; i++) {
 //            intArray[i] = (int) Math.round(Math.random()*30);
@@ -98,7 +101,7 @@ public static int rndMinMax(int min, int max){
         }
         return rndArr2;
     }
-//      6 uzduotis
+//      7 uzduotis
 //     Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį),
 //     susumuotų ir gražintų reikšmę.
 
@@ -110,7 +113,18 @@ public static int rndMinMax(int min, int max){
 
         return sum;
     }
+//      8 uzduotis
+//      Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
 
+public static double arrVidurkis(int[] arr1){
+        int sum1 = 0;
+        double vid;
+    for (int i = 0; i < arr1.length; i++) {
+        sum1 = sum1 + arr1[i];
+    }
+vid = (double) sum1 / arr1.length;
+        return vid;
+}
 
 
 
