@@ -24,10 +24,22 @@ public class Main {
         System.out.println(rndMinMax(a,b));
 
         System.out.println("---------6uzd----------");
+        int[] rndNumArr = rndArr(5,10,6);
+        Main.skaiciai(rndNumArr);
 
+        System.out.println("---------7uzd----------");
 
-
-
+//        int[] intArray = new int[50];
+//        for (int i = 0; i < intArray.length; i++) {
+//            intArray[i] = (int) Math.round(Math.random()*30);
+//        }
+//        skaiciai(intArray);
+        /*
+        str = rndNumArr[0]
+        hp =  rndNumArr[1]
+        atk = rndNumArr[2]
+        def = rndNumArr[3]
+         */
     }
 
     public static void duSkaic(int c, int d) {
@@ -72,5 +84,18 @@ public static int rndMinMax(int min, int max){
       int ab = (int) (min + Math.round( Math.random() * (max-min)));
       return ab;
 }
+
+//      6 uzduotis
+//     Sukurkite Funkciją kuri sugeneruotų random int skaičių masyvą ir jį gražintų.
+//     Funkcija priima tris int tipo kintamuosius, min, max ir length reikšmėms nustatyti.
+
+    public static int[] rndArr(int min, int max, int length){
+        int[] rndArr2 = new int[length]; //masyvo
+        for (int i = 0; i < length; i++) {
+            rndArr2[i] = (int) (min + Math.round( Math.random() * (max-min))); //i masyva ideti rndNum nuo min iki max
+        }
+        return rndArr2;
+    }
+
 
 }
