@@ -177,6 +177,7 @@ public class Main {
 
 public static String sakKodavimas(String sakinysK){
     // replace charAt(i) with charAt(i=sakinys.lentgh -i)
+    sakinysK = new StringBuilder(sakinysK).reverse().toString();
     return sakinysK;
 }
 
